@@ -1,4 +1,4 @@
-export interface IProduct{
+export interface IProduct {
     id: number;
     name: string;
     price: number;
@@ -6,12 +6,12 @@ export interface IProduct{
     updatedAt: Date;
 }
 
-export interface IProductCrud{
-    createProduct(data: {name: string, price: number}): IProduct
+export interface IProductCrud {
+    createProduct(data: { name: string, price: number }): IProduct
     getProducts(): IProduct[]
     getOneProduct(id: number): IProduct | undefined
-    updateProduct(id: number, data: {name: string, price: number}): IProduct
-    deleteProduct(id: number): {message: string}
+    updateProduct(id: number, data: { name?: string, price?: number }): IProduct
+    deleteProduct(id: number): { message: string }
 }
 
 
